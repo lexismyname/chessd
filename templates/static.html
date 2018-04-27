@@ -1,0 +1,12 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="chessd">chessd</h1>
+<p><code>chessd</code> is a simple network daemon used as a stockfish wrapper. <code>chesscli</code> is a lightweight client for the API.</p>
+<h2 id="usage">usage</h2>
+<p>typical chesscli usage scenario:</p>
+<pre><code>chesscli start &gt; api_token #get <span class="hljs-keyword">an</span> API <span class="hljs-keyword">token</span>
+<span class="hljs-keyword">cat</span> api_token | chesscli <span class="hljs-keyword">move</span> &lt;<span class="hljs-keyword">move</span>&gt; #make a <span class="hljs-keyword">move</span>
+<span class="hljs-keyword">cat</span> api_token | chesscli best #get best <span class="hljs-keyword">move</span>
+</code></pre><p>created with <strong>flask</strong> and <strong>stockfish</strong></p>
+</body></html>

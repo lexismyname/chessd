@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+import sys, requests
+
+HOST = 'http://localhost:5000'
+
+command = sys.argv[1]
+
+if command == 'new':
+	print(requests.post(HOST+'/new').text)
+	exit(0)
+if command == 'move':
+	token = input()
+	print('chessd: current position', token, 'is:')
+	print(requests.get(HOST+'/move/'+token+'/'+sys.argv[2]).text)
+	exit(0)
+if command == 'best':
+	token = input()
+	print('chessd: current best move for token:', token)
+	print(requests.get(HOST+'/best/'+token).text)
+	exit(0)
